@@ -6,7 +6,7 @@ export default function Contact() {
     <div className="flex flex-col justify-center transition-all h-full">
       <p>
         If you&apos;d like to get in touch, consider writing an email if you
-        like view my cv.
+        like, view my cv.
       </p>
 
       <div className="my-8 flex justify-between">
