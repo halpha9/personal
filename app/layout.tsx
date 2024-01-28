@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Providers from "@/providers";
+import Loader from "@/components/loader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,10 +29,10 @@ export const metadata = {
       url: "https://www.harryalpha.com",
     },
   ],
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+  // themeColor: [
+  //   { media: "(prefers-color-scheme: light)", color: "white" },
+  //   { media: "(prefers-color-scheme: dark)", color: "black" },
+  // ],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -87,7 +88,9 @@ export default function RootLayout({
           fontHeading.variable
         )}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Loader>{children}</Loader>
+        </Providers>
       </body>
     </html>
   );

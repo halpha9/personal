@@ -1,6 +1,8 @@
 "use client";
 
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "./theme";
+import AppProvider from "./app";
 
 interface Props {
   children: React.ReactNode;
@@ -8,8 +10,11 @@ interface Props {
 
 export default function Providers({ children }: Props) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
-      {children}
-    </ThemeProvider>
+    <AppProvider>
+      <ThemeProvider attribute="class" defaultTheme="dark">
+        {children}
+        <Analytics />
+      </ThemeProvider>
+    </AppProvider>
   );
 }

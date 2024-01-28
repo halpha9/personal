@@ -15,7 +15,6 @@ const ThemePicker = () => {
         >
           <input
             checked={theme === "light"}
-            defaultChecked={theme === "light"}
             type="checkbox"
             readOnly
             className="h-3 w-3 accent-black"
@@ -30,7 +29,6 @@ const ThemePicker = () => {
         >
           <input
             checked={theme === "dark"}
-            defaultChecked={theme === "dark"}
             type="checkbox"
             readOnly
             className="h-3 w-3 accent-white"
