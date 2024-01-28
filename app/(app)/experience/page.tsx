@@ -2,10 +2,10 @@ import { format } from "date-fns";
 
 export default function Experience() {
   return (
-    <div className="p-4 flex-col flex self-end justify-end items-end space-y-8">
+    <div className="p-4 flex-col flex self-end justify-end items-end space-y-8 w-full pb-36 md:pb-0">
       {experience.map((work) => (
-        <div key={work.company} className="flex flex-col">
-          <p className="text-3xl truncate">{work.company}</p>
+        <div key={work.company} className="flex flex-col w-full">
+          <p className="text-sm md:text-3xl truncate">{work.company}</p>
 
           <p className="opacity-50 text-xs whitespace-nowrap py-1">
             <span>{format(new Date(work.from), "MMM.yyyy")}</span> -{" "}
@@ -15,9 +15,9 @@ export default function Experience() {
                 : format(new Date(work.to), "MMM.yyyy")}
             </span>
           </p>
-          <span>{work.title}</span>
+          <span className="text-xs md:text-base">{work.title}</span>
 
-          <div className="flex flex-col space-y-2 mt-2 opacity-80">
+          <div className="text-[8px] md:text-base flex flex-col space-y-2 mt-2 opacity-80">
             {work.points.map((point, index) => (
               <p key={index} className="text-xs">
                 {point}
@@ -25,7 +25,7 @@ export default function Experience() {
             ))}
           </div>
 
-          <div className="flex flex-row space-x-2 mt-4">
+          <div className="md:flex flex-row space-x-2 mt-4 hidden">
             {work.technologies.map((tech, index) => (
               <p key={index} className="text-xs">
                 {tech} {index + 1 === work.technologies.length ? "" : "•"}

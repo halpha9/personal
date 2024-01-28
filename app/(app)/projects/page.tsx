@@ -8,20 +8,23 @@ export default function About() {
         <Link
           key={project.title}
           href={project.url}
-          className="flex flex-row items-center space-x-4 transition-all hover:opacity-40 cursor-pointer"
+          className="flex md:flex-row flex-col-reverse md:items-center space-x-2 md:space-x-4 transition-all hover:opacity-40 cursor-pointer"
         >
-          <p className="self-end opacity-80 whitespace-nowrap">
+          <p className="self-end opacity-80 whitespace-nowrap text-xs md:text-base">
             <span>{format(new Date(project.date), "MMM.yyyy")}</span> /{" "}
             <span>{project.scope}</span>
           </p>
 
-          <p className="text-5xl truncate">{project.title}</p>
+          <p className="text-base font-bold md:text-5xl md:font-normal truncate">
+            {project.title}
+          </p>
         </Link>
       ))}
     </div>
   );
 }
 
+// ChIJYQ_54rhUi4IRuPbPFCSNkPg
 //TODO: ADD TIMELINE SORT
 
 const projects = [
