@@ -31,6 +31,10 @@ export default function Nav() {
 
 const navItems = [
   {
+    name: "Home",
+    url: "/",
+  },
+  {
     name: "Projects",
     url: "/projects",
   },
