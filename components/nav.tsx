@@ -38,6 +38,10 @@ const navItems = [
     name: "Experience",
     url: "/experience",
   },
+  //   {
+  //     name: "Blog",
+  //     url: "/blog",
+  //   },
   {
     name: "Contact",
     url: "/contact",

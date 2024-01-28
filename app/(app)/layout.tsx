@@ -3,7 +3,6 @@ import Nav from "@/components/nav";
 import ThemePicker from "@/components/theme-picker";
 import { getWeather } from "@/lib/weather";
 import { format } from "date-fns";
-import { headers } from "next/headers";
 import Link from "next/link";
 import { RiGithubLine, RiLinkedinBoxFill } from "react-icons/ri";
 
