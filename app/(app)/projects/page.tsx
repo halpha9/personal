@@ -1,11 +1,13 @@
 import { format } from "date-fns";
+import Link from "next/link";
 
 export default function About() {
   return (
     <div className="p-4 flex-col flex self-end justify-end items-end space-y-8">
       {projects.map((project) => (
-        <div
+        <Link
           key={project.title}
+          href={project.url}
           className="flex flex-row items-center space-x-4 transition-all hover:opacity-40 cursor-pointer"
         >
           <p className="self-end opacity-80 whitespace-nowrap">
@@ -14,11 +16,12 @@ export default function About() {
           </p>
 
           <p className="text-5xl truncate">{project.title}</p>
-        </div>
+        </Link>
       ))}
     </div>
   );
 }
+
 //TODO: ADD TIMELINE SORT
 
 const projects = [
