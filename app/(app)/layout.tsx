@@ -29,7 +29,8 @@ export default async function RootLayout({
             <div className="flex flex-col w-full h-full justify-end">
               <div className="flex flex-col justify-center whitespace-nowrap">
                 <p className="text-xs md:text-base">
-                  {weather.temp}°C London {format(new Date(), "p")}
+                  {weather.temp}°C London{" "}
+                  {format(new Date().toISOString(), "p")}
                 </p>
                 <div className="flex transition-all space-x-3">
                   {socialIcons.map(({ Icon, url }, i) => (
